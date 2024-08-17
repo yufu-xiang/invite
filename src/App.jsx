@@ -1,6 +1,8 @@
 import "./App.css";
 import { useEffect, useState } from "react";
 import confetti from "canvas-confetti";
+import headshot from "./assets/headshot.jpg";
+import weddingImage from "./assets/wedding.jpg";
 
 function App() {
   const [messages, setMessages] = useState([]);
@@ -13,7 +15,7 @@ function App() {
       id: 1,
       from: "left",
       text: "親愛的，翔宇和羽涵要結婚了！",
-      avatar: "src/assets/headshot.jpg",
+      avatar: headshot,
     },
     {
       id: 2,
@@ -24,7 +26,7 @@ function App() {
       id: 3,
       from: "left",
       text: "9/15星期天，辦在台北大直典華",
-      avatar: "src/assets/headshot.jpg",
+      avatar: headshot,
       children: (
         <div className="iframe-container mt-2">
           <iframe
@@ -47,11 +49,9 @@ function App() {
     {
       id: 5,
       from: "left",
-      avatar: "src/assets/headshot.jpg",
+      avatar: headshot,
       text: "我們從國中同學一路走來，愛情長跑11年，如今不僅是是伴侶，更是家人，是彼此攜手共度一生的人，我們誠摯邀請您在9月15日，一同見證我們的愛情，分享我們的幸福時刻！",
-      children: (
-        <img className="rounded" src="src/assets/wedding.jpg" alt="wedding" />
-      ),
+      children: <img className="rounded" src={weddingImage} alt="wedding" />,
     },
   ];
 
@@ -73,7 +73,7 @@ function App() {
       <div className="h-20 w-20 relative">
         <div className="absolute rounded-full bg-green-500 w-4 h-4 right-2 bottom-0 border-2 border-gray-800" />
         <img
-          src="src/assets/headshot.jpg"
+          src={headshot}
           alt="headshot"
           className="w-full h-full  rounded-full"
         />
@@ -84,7 +84,7 @@ function App() {
   );
 
   const MessageList = ({ messages, isTyping }) => (
-    <div className="w-full max-w-md md:max-w-none bg-gray-800 p-4 shadow-lg rounded">
+    <div className="w-full max-w-md md:max-w-none bg-gray-800 p-4  rounded">
       <div className="space-y-4">
         {messages.map((message) => (
           <Message message={message} key={message.id} />
@@ -97,6 +97,13 @@ function App() {
                 : "justify-start"
             }`}
           >
+            {messages[messages.length - 1].from === "right" && (
+              <img
+                src={messages[messages.length - 2].avatar}
+                alt="avatar"
+                className="w-10 h-10 rounded-full mr-2 text-white"
+              />
+            )}
             <div
               className={`${
                 messages[messages.length - 1].from === "right"
@@ -163,7 +170,7 @@ function App() {
       <div className="h-12 w-12 relative">
         <div className="absolute rounded-full bg-green-500 w-3 h-3 right-1 bottom-0 border-2 border-gray-900" />
         <img
-          src="src/assets/headshot.jpg"
+          src={headshot}
           alt="small-headshot"
           className="w-full h-full rounded-full"
         />
