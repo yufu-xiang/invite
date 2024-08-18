@@ -50,7 +50,7 @@ function App() {
       id: 5,
       from: "left",
       avatar: headshot,
-      text: "我們從國中同學一路走來，愛情長跑11年，如今不僅是是伴侶，更是家人，是彼此攜手共度一生的人，我們誠摯邀請您在9月15日，一同見證我們的愛情，分享我們的幸福時刻！",
+      text: "我們從國中同學一路走來，愛情長跑11年，如今不僅是伴侶，更是家人，是彼此攜手共度一生的人，我們誠摯邀請您在9月15日，一同見證我們的愛情，分享我們的幸福時刻！",
       children: <img className="rounded" src={weddingImage} alt="wedding" />,
     },
   ];
