@@ -25,12 +25,12 @@ function App() {
     {
       id: 3,
       from: "left",
-      text: "9/15星期天，辦在台北大直典華",
+      text: "9/15(日) 上午11:50，辦在台北大直典華 繁華廳5F",
       avatar: headshot,
       children: (
         <div className="iframe-container mt-2">
           <iframe
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3613.5347932162254!2d121.55222587555458!3d25.08375203628609!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3442ac123aa95643%3A0x14abdff6d45ddd5e!2z5YW46I-v5bm456aP5aSn5qiTKOWkp-ebtOW6lyk!5e0!3m2!1szh-TW!2stw!4v1723825436820!5m2!1szh-TW!2stw"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3613.534793216226!2d121.55222587555458!3d25.08375203628608!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3442ac123aa95643%3A0x14abdff6d45ddd5e!2z5YW46I-v5bm456aP5aSn5qiTKOWkp-ebtOW6lyk!5e0!3m2!1szh-TW!2stw!4v1723990456841!5m2!1szh-TW!2stw"
             width="100%"
             height="100%"
             style={{ border: 0 }}
